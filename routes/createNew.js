@@ -9,5 +9,6 @@ createNewRouter.post("/faculty", createNew.createNewFaculty);
 createNewRouter.post("/batch", createNew.createNewBatch);
 createNewRouter.post("/subject", createNew.createNewSubject);
 createNewRouter.post("/testimonial", createNew.createNewTestimonial);
+createNewRouter.post("/marks", createNew.createNewMarks);
 
 export default createNewRouter;

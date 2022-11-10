@@ -17,6 +17,7 @@ const batchSchema = mongoose.Schema({
     type: [],
     default: [],
   },
+  timing: String,
 });
 
 const batches = mongoose.model("batches", batchSchema);

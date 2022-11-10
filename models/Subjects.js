@@ -9,7 +9,7 @@ const subjectSchema = mongoose.Schema({
     type: [],
     default: [],
   },
-  resourceLinks: {
+  resourceLink: {
     type: [],
     default: [],
   },

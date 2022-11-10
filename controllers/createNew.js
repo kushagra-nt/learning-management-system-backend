@@ -4,6 +4,7 @@ import admins from "../models/admin.js";
 import subjects from "../models/Subjects.js";
 import batchesModel from "../models/Batch.js";
 import testimonial from "../models/testimonial.js";
+import marks from "../models/marks.js";
 
 export const createNewStudent = async (req, res) => {
   const { name, rollNo, password, phoneNo, batch } = req.body;
@@ -81,6 +82,11 @@ export const createNewBatch = async (req, res) => {
   });
 
   res.send(newBatch);
+};
+export const createNewMarks = async (req, res) => {
+  const newMarks = await marks.create({});
+
+  res.send(newMarks);
 };
 
 export const createNewTestimonial = async (req, res) => {

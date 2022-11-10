@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import createNew from "./routes/createNew.js";
 import getInfo from "./routes/getInfo.js";
+import update from "./routes/update.js";
 
 const app = express();
 
@@ -20,6 +21,8 @@ app.get("/", (req, res) => {
 
 app.use("/create", createNew);
 app.use("/get", getInfo);
+app.use("/update", update);
+app.use("/delete", getInfo);
 
 const PORT = process.env.PORT || 5000;
 
