@@ -9,10 +9,7 @@ const subjectSchema = mongoose.Schema({
     type: [],
     default: [],
   },
-  resourceLink: {
-    type: [],
-    default: [],
-  },
+  resourceLink: String,
   facultyId: String,
 });
 

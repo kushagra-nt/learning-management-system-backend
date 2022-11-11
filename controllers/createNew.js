@@ -5,6 +5,7 @@ import subjects from "../models/Subjects.js";
 import batchesModel from "../models/Batch.js";
 import testimonial from "../models/testimonial.js";
 import marks from "../models/marks.js";
+import timetables from "../models/timetable.js";
 
 export const createNewStudent = async (req, res) => {
   const { name, rollNo, password, phoneNo, batch } = req.body;
@@ -101,4 +102,10 @@ export const createNewTestimonial = async (req, res) => {
   });
 
   res.send(newTes);
+};
+
+export const creatett = async (req, res) => {
+  const timetable = await timetables.create({});
+
+  res.send({});
 };

@@ -9,5 +9,6 @@ getInfo.get("/batch/:id", get.batchInfo);
 getInfo.get("/resources/:subjectId", get.resources);
 getInfo.get("/testimonial", get.testimonial);
 getInfo.get("/marks", get.getMarks);
+getInfo.get("/timetable", get.getTimetable);
 
 export default getInfo;

@@ -4,6 +4,7 @@ import subjects from "../models/Subjects.js";
 import batches from "../models/Batch.js";
 import testimonials from "../models/testimonial.js";
 import marks from "../models/marks.js";
+import timetables from "../models/timetable.js";
 
 export const studentInfo = async (req, res) => {
   const studentId = req.params.id;
@@ -45,4 +46,10 @@ export const testimonial = async (req, res) => {
 export const getMarks = async (req, res) => {
   const ret = await marks.findOne();
   res.send(ret.marks);
+};
+
+export const getTimetable = async (req, res) => {
+  const timetable = await timetables.findOne();
+
+  res.send(timetable.timetable);
 };
