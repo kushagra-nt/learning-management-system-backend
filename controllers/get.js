@@ -1,4 +1,4 @@
-import students from "../models/Subjects.js";
+import students from "../models/Students.js";
 import faculties from "../models/Faculty.js";
 import subjects from "../models/Subjects.js";
 import batches from "../models/Batch.js";
