@@ -6,6 +6,7 @@ import cors from "cors";
 import createNew from "./routes/createNew.js";
 import getInfo from "./routes/getInfo.js";
 import update from "./routes/update.js";
+import login from "./controllers/login.js";
 
 const app = express();
 
@@ -18,6 +19,8 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.send("LMS backend server");
 });
+
+app.post("/login", login);
 
 app.use("/create", createNew);
 app.use("/get", getInfo);
