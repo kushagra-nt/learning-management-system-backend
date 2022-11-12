@@ -5,13 +5,12 @@ import timetables from "../models/timetable.js";
 
 export const updateMarks = async (req, res) => {
   const studentId = req.params.id;
-  const student = await students.findOne({ rollNo: studentId });
 
-  const { phyMarks, chemMarks, mathMarks, bioMarks } = req.body;
+  const { name, batch, phyMarks, chemMarks, mathMarks, bioMarks } = req.body;
 
   const marksTable = await marks.findOne();
 
-  marksTable.marks.push({ name: student.name, phyMarks, chemMarks, mathMarks, bioMarks, batch: student.batch });
+  marksTable.marks.push({ name: name, phyMarks, chemMarks, mathMarks, bioMarks, batch });
 
   await marksTable.save();
 
