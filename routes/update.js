@@ -8,3 +8,4 @@ updateRouter.post("/resource/:id", update.resource);
 updateRouter.post("/timetable", update.uptt);
 
 export default updateRouter;
+//this is comment
